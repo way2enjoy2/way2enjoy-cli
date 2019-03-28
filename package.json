@@ -1,0 +1,42 @@
+{
+  "name": "way2enjoy-cli",
+  "version": "0.0.1",
+  "description": "Handy command line tool for shrinking JPG, PNG, GIF, PDF, MP3, MP4 and almost all music & video files images using the Way2enjoy API",
+  "homepage": "https://github.com/way2enjoy2/way2enjoy-cli",
+  "author": "Way2enjoy2 <support@way2enjoy.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Way2enjoy2/way2enjoy-cli.git"
+  },
+  "keywords": [
+    "way2enjoy",
+    "shrinking",
+    "compression",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/Way2enjoy2/Way2enjoy-cli/issues"
+  },
+  "main": "Way2enjoy-cli.js",
+  "license": "MIT",
+  "dependencies": {
+    "array-uniq": "^1.0.2",
+    "chalk": "^1.1.3",
+    "glob": "^7.0.3",
+    "minimatch": "^3.0.0",
+    "minimist": "^1.2.0",
+    "prettysize": "0.0.3",
+    "request": "^2.70.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "Way2enjoy": "Way2enjoy-cli.js"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0",
+    "jshint": "^2.9.1"
+  },
+  "scripts": {
+    "test": "jshint Way2enjoy-cli.js && eslint Way2enjoy-cli.js"
+  }
+}
