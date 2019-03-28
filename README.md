@@ -51,6 +51,9 @@ That's it. Pretty easy, huh?
 
 ## Changelog
 
+* 0.0.2
+	* Stable version
+
 * 0.0.1
 	* Initial version
 
