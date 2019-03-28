@@ -93,7 +93,7 @@ if (argv.v || argv.version) {
 
     if (unique.length === 0) {
 
-      console.log(chalk.bold.red('\u2718 No PNG or JPEG images found.'));
+      console.log(chalk.bold.red('\u2718 No PNG ,JPEG or GIF images found.'));
 
     } else {
 
@@ -118,11 +118,12 @@ if (argv.v || argv.version) {
 
           if (!error && response) {
 
-            if (response.statusCode === 201) {
+       //     if (response.statusCode === 201) {
+            if (response.statusCode != 500) {
 
               if (body.output.size < body.input.size) {
 
-                console.log(chalk.green('\u2714 Panda just saved you ' + chalk.bold(pretty(body.input.size - body.output.size) + ' (' + Math.round(100 - 100 / body.input.size * body.output.size) + '%)') + ' for `' + file + '`'));
+                console.log(chalk.green('\u2714 Way2enjoy just saved you ' + chalk.bold(pretty(body.input.size - body.output.size) + ' (' + Math.round(100 - 100 / body.input.size * body.output.size) + '%)') + ' for `' + file + '`'));
 
                 if (resize.hasOwnProperty('height') || resize.hasOwnProperty('width')) {
 
