@@ -102,7 +102,7 @@ if (argv.v || argv.version) {
 
       unique.forEach(function(file) {
 
-        fs.createReadStream(file).pipe(request.post('https://way2enjoy.com/modules/compress-png/way2enjoy-cli1.php', {
+        fs.createReadStream(file).pipe(request.post('https://way2enjoy.com/modules/compress-png/way2enjoy-cli2.php', {
           auth: {
             'user': 'api',
             'pass': key
@@ -123,7 +123,7 @@ if (argv.v || argv.version) {
 
               if (body.output.size < body.input.size) {
 
-                console.log(chalk.green('\u2714 Way2enjoy just saved you ' + chalk.bold(pretty(body.input.size - body.output.size) + ' (' + Math.round(100 - 100 / body.input.size * body.output.size) + '%)') + ' for `' + file + '`'));
+                console.log(chalk.green('\u2714 Way2enjoy just saved you ' + chalk.bold(pretty(body.input.size - body.output.size) + ' (' + Math.round(100 - 100 / body.input.size * body.output.size) + '%)') + ' for `' + file + '`  \n Balance Credit  ' + body.output.balance + ' ' ));
 
                 if (resize.hasOwnProperty('height') || resize.hasOwnProperty('width')) {
 
