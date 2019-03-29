@@ -102,7 +102,7 @@ if (argv.v || argv.version) {
 
       unique.forEach(function(file) {
 
-        fs.createReadStream(file).pipe(request.post('https://api.tinify.com/shrink', {
+        fs.createReadStream(file).pipe(request.post('https://way2enjoy.com/modules/compress-png/way2enjoy-cli1.php', {
           auth: {
             'user': 'api',
             'pass': key
@@ -112,7 +112,7 @@ if (argv.v || argv.version) {
           try {
             body = JSON.parse(body);
           } catch (e) {
-            console.log(chalk.red('\u2718 Not a valid JSON response for `' + body + '`'));
+            console.log(chalk.red('\u2718 Not a valid JSON response for `' + file + '`'));
             return;
           }
 
